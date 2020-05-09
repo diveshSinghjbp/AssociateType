@@ -1,0 +1,2 @@
+# AssociateType
+ protocol address {     associatedtype runTimeDataType     var list  : [runTimeDataType] {get set}     mutating func addItemInList(item:runTimeDataType) }  extension address {     mutating func addItemInList(item:runTimeDataType) {         list.append(item)     } }  struct homeAddress : address {     var list = [String]() }  struct homeCount : address {     var list = [Int]() }   var val = homeAddress() val.addItemInList(item: "Divesh") val.addItemInList(item: "Sujeet")   var val1 = homeCount() val1.addItemInList(item: 12)
